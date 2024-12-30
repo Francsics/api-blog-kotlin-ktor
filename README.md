@@ -74,7 +74,7 @@ Blogueiro/
  
 
 ---
-## Configurando o banco de dados  
+## Configuração da Base de Dados 
 
 1. **Instale o MySql** e crie um novo banco de dados chamado `ktor`.  
 
