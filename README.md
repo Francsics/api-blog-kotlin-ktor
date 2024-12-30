@@ -133,7 +133,8 @@ curl -X POST http://localhost:8080/user/register \
 -H "Content-Type: application/json" \
 -d '{
   "username": "joao",
-  "password": "12345"
+  "email": "joao@gmail.com",
+  "password_hash": "12345"
 }'
 ```
 
@@ -142,7 +143,7 @@ curl -X POST http://localhost:8080/user/register \
 curl -X POST http://localhost:8080/user/login \
 -H "Content-Type: application/json" \
 -d '{
-  "username": "joao",
+  "email": "joao@gmail.com",
   "password": "12345"
 }'
 ```
