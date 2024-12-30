@@ -164,6 +164,6 @@ curl -X POST http://localhost:8080/user/login \
 ---
 
 ## 📧 Contacto  
-- **Desenvolvedores:** Francsico Santo / Gonçalo Landeiro  
+- **Desenvolvedores:** Francisco Santo / Gonçalo Landeiro  
 - **Email:** francisco.santo@my.istec.pt / goncalo.landeiro@my.istec.pt  
 
