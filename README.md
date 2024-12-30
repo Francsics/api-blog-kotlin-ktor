@@ -22,14 +22,14 @@ O objetivo deste projeto é fornecer endpoints para a gestão de posts e utiliza
 
 ## 📜 Visão Geral  
 A Blogueiro API é uma aplicação de blog que permite a criação e gestão de posts e utilizadores.  
-Com autenticação baseada em JWT e persistência de dados em Firebase, a API foi desenvolvida para fornecer segurança e flexibilidade na gestão de conteúdos digitais.  
+Com autenticação baseada em JWT e persistência de dados em mysql, a API foi desenvolvida para fornecer segurança e flexibilidade na gestão de conteúdos digitais.  
 
 ---
 
 ## 🔧 Recursos  
-- **CRUD de Utilizadores e Posts** – Criar, listar, atualizar e eliminar.  
+- **CRUD de Utilizadores e Posts** – Criar, listar, editar e eliminar.  
 - **Autenticação** – Registo e login de utilizadores com JWT.  
-- **Base de Dados** – Integração com Firebase para armazenamento e manipulação de dados.  
+- **Base de Dados** – Integração com mysql para armazenamento e manipulação de dados.  
 - **Rotas Protegidas** – Autorização em endpoints sensíveis.  
 - **Gestão de Logs** – Monitorização detalhada com `logback.xml`.  
 
