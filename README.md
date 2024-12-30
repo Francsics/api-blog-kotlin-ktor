@@ -78,7 +78,7 @@ Blogueiro/
 
 1. **Instale o MySql** e crie um novo banco de dados chamado `ktor`.  
 
-2. **Configure a conexão com o banco de dados** no arquivo `DbConection.kt`:  
+2. **Configure a conexão com a base de dados** no arquivo `DbConection.kt`:  
 
 ```kotlin
 package com.example.mysql
