@@ -70,7 +70,7 @@ Blogueiro/
 ### 🔗 Pré-requisitos  
 - [Kotlin](https://kotlinlang.org/)  
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)  
-- [Mysql]([https://www.jetbrains.com/idea/](https://www.mysql.com/))
+- [Mysql](https://www.jetbrains.com/idea/)
  
 
 ---
