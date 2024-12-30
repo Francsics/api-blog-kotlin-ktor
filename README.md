@@ -102,16 +102,15 @@ Blogueiro/
 
 ## 🌐 Endpoints Disponíveis  
 
-### 🧑‍💻 Utilizador  
-- **POST** `/user/register` – Registar um novo utilizador  
-- **POST** `/user/login` – Autenticar o utilizador e devolver um token JWT  
 
-### 📝 Posts  
-- **GET** `/posts` – Listar todos os posts  
-- **POST** `/posts` – Criar um novo post  
-- **PUT** `/posts/{id}` – Atualizar um post  
-- **DELETE** `/posts/{id}` – Eliminar um post  
-
+| Método  | Endpoint                  | Descrição                            | Exemplo de Entrada                          |
+|---------|---------------------------|--------------------------------------|--------------------------------------------|
+| **POST**| `/register`               | Regista um novo utilizador.          | ```json { "name": "João", "email": "joao@email.com", "password_hash": "123456" }``` |
+| **POST**| `/login`                  | Faz login de um utilizador.          | ```json { "email": "joao@email.com", "password_hash": "123456" }```               |
+| **GET** | `/listausers`             | Lista todos os utilizadores.         | _Sem entrada necessária_                   |
+| **POST**| `/criarposts`             | Cria um novo post.                   | ```json { "title": "Novo Post", "content": "Conteúdo do post", "author_id": 1, "likes": 10, "comments": 5 }``` |
+| **Delete**| `/deleteposts`            | Elimina um post por ID.              | ```json { "id": 3 }```                     |
+| **POST**| `/editarposts`            | Edita um post existente.             | ```json { "id": 3, "title": "Título Editado", "content": "Novo conteúdo", "author_id": 1, "likes": 15, "comments": 8 }``` |
 ---
 
 ## 🛠️ Exemplos com cURL  
