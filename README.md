@@ -152,6 +152,6 @@ curl -X POST http://localhost:8080/user/login \
 ---
 
 ## 📧 Contacto  
-- **Desenvolvedor:** [O Teu Nome]  
-- **Email:** [oseuemail@email.com]  
-- **LinkedIn:** [linkedin.com/in/oseuperfil](https://linkedin.com)  
+- **Desenvolvedores:** Francsico Santo / Gonçalo Landeiro  
+- **Email:** francisco.santo@my.istec.pt / goncalo.landeiro@my.istec.pt  
+
