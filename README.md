@@ -74,16 +74,28 @@ Blogueiro/
  
 
 ---
+## Configurando o banco de dados  
 
-### ⚙️ Configuração da Base de Dados  
-1. No Firebase, cria uma base de dados em tempo real ou Firestore.  
-2. Atualiza o ficheiro `DbConnection.kt` com as credenciais do teu projeto Firebase:  
-   ```kotlin
-   val databaseUrl = "https://SEU_PROJETO.firebaseio.com"
-   val apiKey = "SUA_API_KEY"
-   ```
-3. Certifica-te de que o Firebase permite conexões da origem correta (localhost para desenvolvimento).  
+1. **Instale o MySql** e crie um novo banco de dados chamado `ktor`.  
 
+2. **Configure a conexão com o banco de dados** no arquivo `DbConection.kt`:  
+
+```kotlin
+package com.example.mysql
+
+import org.ktorm.database.Database
+object DbConnection {
+    private val db: Database? = null
+    fun getDatabaseInstance(): Database {
+        return db ?: Database.connect(
+            url = "jdbc:mysql://127.0.0.1:3306/ktor",
+            driver = "com.mysql.cj.jdbc.Driver",
+            user = "root",
+            password = "olamundo"
+        )
+    }
+}
+```
 ---
 
 ### ▶️ Executar a API  
