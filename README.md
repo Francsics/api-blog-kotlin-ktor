@@ -6,21 +6,21 @@ O objetivo deste projeto é fornecer endpoints para a gestão de posts e utiliza
 ---
 
 ## 📑 Índice
-1. [Visão Geral](#visao-geral)  
+1. [Visão Geral](#visão-geral)  
 2. [Recursos](#recursos)  
 3. [Estrutura do Projeto](#estrutura-do-projeto)  
-4. [Instalação](#instalacao)  
+4. [Instalação](#instalação)  
    - [Pré-requisitos](#pré-requisitos)  
-   - [Configuração da Base de Dados](#configuracao-da-base-de-dados)  
+   - [Configuração da Base de Dados](#configuração-da-base-de-dados)  
    - [Executar a API](#executar-a-api)  
-   - [Endpoints Disponíveis](#endpoints-disponiveis)  
+   - [Endpoints Disponíveis](#endpoints-disponíveis)  
    - [Exemplos com cURL](#exemplos-com-curl)  
 5. [Testar a API](#testar-a-api)  
 6. [Contacto](#contacto)  
 
 ---
 
-## 📜 Visao Geral  
+## 📜 Visão Geral  
 A Blogueiro API é uma aplicação de blog que permite a criação e gestão de posts e utilizadores.  
 Com autenticação baseada em JWT e persistência de dados em Firebase, a API foi desenvolvida para fornecer segurança e flexibilidade na gestão de conteúdos digitais.  
 
@@ -36,6 +36,7 @@ Com autenticação baseada em JWT e persistência de dados em Firebase, a API fo
 ---
 
 ## 📂 Estrutura do Projeto  
+```
 Blogueiro/
 │
 ├── src/
@@ -60,10 +61,11 @@ Blogueiro/
 │
 ├── build.gradle.kts                    # Configuração do Gradle
 └── settings.gradle.kts                 # Configuração do projeto Gradle
+```
 
 ---
 
-## 🛠️ Instalacao  
+## 🛠️ Instalação  
 
 ### 🔗 Pré-requisitos  
 - [Kotlin](https://kotlinlang.org/)  
@@ -79,60 +81,77 @@ Blogueiro/
    ```kotlin
    val databaseUrl = "https://SEU_PROJETO.firebaseio.com"
    val apiKey = "SUA_API_KEY"
-	
- 3.	Certifica-te de que o Firebase permite conexões da origem correta (localhost para desenvolvimento).
+   ```
+3. Certifica-te de que o Firebase permite conexões da origem correta (localhost para desenvolvimento).  
 
-    ▶️ Executar a API
-1.	Clonar este repositório:
+---
 
-git clone <URL_DO_SEU_REPOSITORIO>
-cd Blogueiro
+### ▶️ Executar a API  
+1. Clonar este repositório:  
+   ```bash
+   git clone <URL_DO_SEU_REPOSITORIO>
+   cd Blogueiro
+   ```
+2. Executar o projeto com Gradle:  
+   ```bash
+   ./gradlew run
+   ```
+3. A API estará disponível em `http://localhost:8080`.  
 
-2.	Executar o projeto com Gradle:
-./gradlew run
+---
 
-3.	A API estará disponível em http://localhost:8080.
-   
-🌐 Endpoints Disponiveis
+## 🌐 Endpoints Disponíveis  
 
-🧑‍💻 Utilizador
-	•	POST /user/register – Registar um novo utilizador
-	•	POST /user/login – Autenticar o utilizador e devolver um token JWT
+### 🧑‍💻 Utilizador  
+- **POST** `/user/register` – Registar um novo utilizador  
+- **POST** `/user/login` – Autenticar o utilizador e devolver um token JWT  
 
-📝 Posts
-	•	GET /posts – Listar todos os posts
-	•	POST /posts – Criar um novo post
-	•	PUT /posts/{id} – Atualizar um post
-	•	DELETE /posts/{id} – Eliminar um post
+### 📝 Posts  
+- **GET** `/posts` – Listar todos os posts  
+- **POST** `/posts` – Criar um novo post  
+- **PUT** `/posts/{id}` – Atualizar um post  
+- **DELETE** `/posts/{id}` – Eliminar um post  
 
-🛠️ Exemplos com cURL
+---
 
-Criar um Novo Utilizador
+## 🛠️ Exemplos com cURL  
 
+### Criar um Novo Utilizador  
+```bash
 curl -X POST http://localhost:8080/user/register \
 -H "Content-Type: application/json" \
 -d '{
   "username": "joao",
   "password": "12345"
 }'
+```
 
-Login e Obter Token
-
+### Login e Obter Token  
+```bash
 curl -X POST http://localhost:8080/user/login \
 -H "Content-Type: application/json" \
 -d '{
   "username": "joao",
   "password": "12345"
 }'
+```
 
-✅ Testar a API
-	1.	Após executar a API, utiliza o Postman ou Insomnia para testar os endpoints.
-	2.	Certifica-te de adicionar o token JWT nos endpoints protegidos, utilizando o cabeçalho:
-    Authorization: Bearer SEU_TOKEN
+---
 
-  3.	Executa testes unitários com:
-     ./gradlew test
+## ✅ Testar a API  
+1. Após executar a API, utiliza o Postman ou Insomnia para testar os endpoints.  
+2. Certifica-te de adicionar o token JWT nos endpoints protegidos, utilizando o cabeçalho:  
+   ```
+   Authorization: Bearer SEU_TOKEN
+   ```
+3. Executa testes unitários com:  
+   ```bash
+   ./gradlew test
+   ```  
 
-   📧 Contacto
-	•	Desenvolvedores: Francisco Santo Gonçalo Landeiro
-	•	Email: francisco.santo@my.istec.pt / goncalo.landeiro@my.istec.pt
+---
+
+## 📧 Contacto  
+- **Desenvolvedor:** [O Teu Nome]  
+- **Email:** [oseuemail@email.com]  
+- **LinkedIn:** [linkedin.com/in/oseuperfil](https://linkedin.com)  
