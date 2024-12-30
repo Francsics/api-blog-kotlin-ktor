@@ -70,8 +70,8 @@ Blogueiro/
 ### 🔗 Pré-requisitos  
 - [Kotlin](https://kotlinlang.org/)  
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)  
-- [Gradle](https://gradle.org/)  
-- **Firebase** (conta configurada e base de dados criada)  
+- Mysql 
+ 
 
 ---
 
